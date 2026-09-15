@@ -3,6 +3,8 @@ One Trillion Dollars is a 3D adventure puzzle platformer where you find yourself
 
 The game falls under the ODA category (one dev army). Everything was made my me. No outside assets, no AI, nothing.
 
+The project was initially made in Godot 4.7.1, with possible version increments in the future.
+
 ### Goals
 I really wanted to explore new systems and mechanics this time around, and I wanted to continue learning and improving my 3D skills. I always thought the climbing mechanics in PEAK were neat, so I sort of emulated that a little bit in my own way. I wanted to learn more about the way to use vectors in three-dimensional space, and also designing large open-world environments. More on that below.
 
