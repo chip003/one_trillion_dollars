@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b3tiirnb726iw"]
+
+[ext_resource type="Texture2D" uid="uid://dh5qafg00n800" path="res://Texture/bone_texture.png" id="1_loyjj"]
+
+[resource]
+albedo_texture = ExtResource("1_loyjj")
+uv1_triplanar = true
+uv1_triplanar_sharpness = 150.0
+texture_filter = 0

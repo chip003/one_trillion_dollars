@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cs4vrvs2jgis"]
+
+[ext_resource type="Texture2D" uid="uid://bqv21x8vl2de7" path="res://Texture/bark_texture.png" id="1_4q13u"]
+
+[resource]
+albedo_texture = ExtResource("1_4q13u")
+uv1_triplanar = true
+texture_filter = 2

@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://dafktkutqjt2p"]
+
+[ext_resource type="PackedScene" uid="uid://ckdrvx7a2ru6x" path="res://Models/tree.blend" id="1_brfkd"]
+[ext_resource type="Script" uid="uid://dxobfkcmq7hbw" path="res://tree.gd" id="2_d2g23"]
+[ext_resource type="Material" uid="uid://cs4vrvs2jgis" path="res://tree_bark.tres" id="2_gvmkm"]
+[ext_resource type="Texture2D" uid="uid://csdkdb0o7pma6" path="res://Texture/money_blob.png" id="3_d2g23"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_d2g23"]
+points = PackedVector3Array(1.052324, 6.1871996, 0.31514007, -2.7116578, 4.6371555, -1.2345353, -2.7116578, 4.6371555, -0.9021276, 1.3846885, -0.67529917, 0.20472765, -1.2715604, 4.194682, 2.1976132, -1.2715604, -0.78695774, 0.6475478, 0.05611968, -0.56433415, -1.1233425, 1.052324, 3.9727519, 2.1976132, 1.3846885, 3.9727519, -0.9021276, -0.9396404, 6.0762343, -1.4557502, 1.8276927, 5.8549976, -0.01648733, -0.05452031, -0.56433415, 1.2011704, -1.4937291, 4.6371555, -1.7881579, -1.3826447, -0.67529917, -0.45891732, -0.607276, 4.9693575, 2.0864205, 1.4953284, -0.56433415, -0.01648733, -0.05452031, 6.2981644, -1.2345353, -1.9362891, 4.5261903, 0.9795653, 0.27739972, 4.415919, -1.3449477, 0.9416841, 6.1871996, 0.536355, -1.7145648, 4.6371555, -1.7881579, -2.7116578, 4.8583922, -0.9021276, -0.05452031, 5.9659624, 0.42594263, 1.8276927, 5.8549976, 0.20472765, 1.4953284, -0.56433415, 0.20472765, -0.16560465, -0.56433415, -1.1233425, 1.7166085, 3.7515152, -0.3485049, -0.27624467, -0.56433415, 1.2011704, -1.9362891, 4.3049536, 0.9795653, -0.9396404, 3.9727519, 2.1976132, -0.607276, 5.633761, 0.536355, -0.9396404, 6.0762343, -1.2345353)
+
+[node name="tree" unique_id=1982031461 instance=ExtResource("1_brfkd")]
+script = ExtResource("2_d2g23")
+
+[node name="Plane" parent="." index="0" unique_id=1983776064]
+surface_material_override/0 = ExtResource("2_gvmkm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Plane" index="0" unique_id=1529490629]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane/StaticBody3D" index="0" unique_id=60942975]
+shape = SubResource("ConvexPolygonShape3D_d2g23")
+
+[node name="Sprite3D" type="Sprite3D" parent="." index="1" unique_id=383172155]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.6155624, 2.3111584)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("3_d2g23")
+
+[node name="Sprite3D2" type="Sprite3D" parent="." index="2" unique_id=1319665043]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.6155624, 0.22265124)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("3_d2g23")
+
+[node name="Sprite3D3" type="Sprite3D" parent="." index="3" unique_id=682286040]
+transform = Transform3D(1.225, 0, 0, 0, 1.225, 0, 0, 0, 1.225, 0, 6.160332, 0.22265124)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("3_d2g23")
+
+[node name="Sprite3D4" type="Sprite3D" parent="." index="4" unique_id=1529413029]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7819304, 5.552947, 0.22265124)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("3_d2g23")
+
+[node name="Sprite3D5" type="Sprite3D" parent="." index="5" unique_id=647572964]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6269743, 4.1063895, 0.22265124)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("3_d2g23")
+
+[node name="Sprite3D6" type="Sprite3D" parent="." index="6" unique_id=625244269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.418556, 4.1063895, 1.6744735)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("3_d2g23")
+
+[node name="Sprite3D7" type="Sprite3D" parent="." index="7" unique_id=1905932806]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35571, 4.1063895, 1.6744735)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("3_d2g23")
+
+[node name="Sprite3D8" type="Sprite3D" parent="." index="8" unique_id=338162698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35571, 4.1063895, 0.057326555)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("3_d2g23")
+
+[node name="Sprite3D9" type="Sprite3D" parent="." index="9" unique_id=1669022026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5194851, 4.1063895, -1.233228)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("3_d2g23")
+
+[node name="Sprite3D10" type="Sprite3D" parent="." index="10" unique_id=2046900781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.51169586, 5.6673985, -1.8279113)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("3_d2g23")
+
+[node name="Sprite3D11" type="Sprite3D" parent="." index="11" unique_id=399914059]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.887934, 5.6673985, 0.40987408)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("3_d2g23")
+
+[node name="Sprite3D12" type="Sprite3D" parent="." index="12" unique_id=790011529]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.42719078, 5.6673985, 1.2169849)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("3_d2g23")
+
+[node name="Sprite3D13" type="Sprite3D" parent="." index="13" unique_id=1592706187]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2786944, 5.6673985, -1.0990325)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("3_d2g23")
+
+[node name="Sprite3D14" type="Sprite3D" parent="." index="14" unique_id=810032030]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8445024, 4.590143, -1.3818585)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("3_d2g23")
+
+[node name="Sprite3D15" type="Sprite3D" parent="." index="15" unique_id=1940255089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3100655, 3.1461473, -0.30786157)
+billboard = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("3_d2g23")

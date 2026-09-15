@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://x24jccg0y4ct"]
+
+[ext_resource type="PackedScene" uid="uid://clqhc5mi2qv8c" path="res://Models/human_home.blend" id="1_tb3kq"]
+[ext_resource type="Material" uid="uid://cgx6f7nfbdgf1" path="res://brick.tres" id="2_nve66"]
+[ext_resource type="Material" uid="uid://jum4t8vjg4rw" path="res://home _panels.tres" id="2_oqi4i"]
+[ext_resource type="Material" uid="uid://kbpk2cbmwqh5" path="res://roof.tres" id="3_4yot6"]
+[ext_resource type="Material" uid="uid://dp1p57y7nf3e5" path="res://void.tres" id="3_nt03v"]
+[ext_resource type="Material" uid="uid://dstbd5rpkj6jy" path="res://smoke.tres" id="6_4yot6"]
+[ext_resource type="Script" uid="uid://c472a4fpjjqrn" path="res://man.gd" id="7_pwvdy"]
+[ext_resource type="Texture2D" uid="uid://djh6ufp3sqkuc" path="res://homunculus.png" id="8_b4qtk"]
+[ext_resource type="AudioStream" uid="uid://5f01q03ln4ru" path="res://Music/grubbin.ogg" id="9_pwvdy"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4yot6"]
+points = PackedVector3Array(1.6232857, 3.1403441, 0.95748705, -1.8210943, 3.2532253, -0.21075428, -1.8210943, 3.2532253, 0.24942693, -1.4376999, 0.018623907, -0.99158126, 1.5248984, 2.9282048, -1.3746328, 1.3846295, 0.06792292, 1, -1.3984213, 0.06792292, 1, 1.4361866, 0.0032287394, -1, -1.6481435, 2.7925594, 1.4012611, -1.5946751, 2.927849, -1.3746246, 1.7418002, 3.5907, 0.073417835, 1.5764832, 2.79292, 1.4012611, -1.7566494, 3.5910845, 0.073452085, 1.8069661, 3.3113046, -0.15330067, -1.6007106, 2.9320827, 1.3604803, 1.7329444, 3.5817044, -0.09206552, -1.6481435, 2.7348409, -1.3625884, 1.6340153, 2.6778438, -1.3051348, -1.7469208, 3.5812042, -0.09205834, 1.6340153, 2.7352016, 1.3435313, 1.8069661, 3.3113046, 0.13424353, 1.4215089, 2.9344196, 1.3629147, 1.3983935, 3.081673, -1.0843068, -1.7056754, 2.850278, -1.0173144, -1.7056754, 2.850278, 0.9979811, 1.5814316, 2.9846883, -1.2636251, -1.5803151, 2.9731092, 1.2876014, 1.401417, 2.9740255, 1.2882394, 1.749079, 3.0807915, 0.53724736, 1.6915472, 2.9079964, -0.9598608, -1.519062, 3.023491, -1.1920092, 1.576847, 2.925602, 1.3521103)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xe4fk"]
+points = PackedVector3Array(0.6430909, 2.0111063, 0.64290035, -0.99816287, -0.98450065, -0.99816287, -0.99816287, -0.98450065, 0.98627245, 0.99644387, -1, 0.99644387, 0.98627245, -0.98450065, -0.99816287, -0.6456258, 1.9897201, -0.64562577, -0.6456258, 1.9897201, 0.63354754, 0.63373536, 1.9897202, -0.6456258, -0.9204623, -0.6156963, 0.95444816, 0.95444816, -0.6156963, -0.92046225, -0.6448001, 1.7139394, 0.6783143, 0.95444816, -0.6156963, 0.95444816, 0.67834634, 1.7136698, -0.64465487)
+
+[sub_resource type="SphereMesh" id="SphereMesh_oqi4i"]
+material = ExtResource("6_4yot6")
+
+[sub_resource type="Curve" id="Curve_giiiv"]
+_data = [Vector2(0, 0), 0.0, 4.6540856, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_mm2mi"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Gradient" id="Gradient_5cn4e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lnhc4"]
+size = Vector3(1, 1.7958984, 1)
+
+[node name="human_home" unique_id=1689826888 instance=ExtResource("1_tb3kq")]
+
+[node name="Cube" parent="." index="0" unique_id=11431571]
+surface_material_override/0 = ExtResource("2_oqi4i")
+surface_material_override/1 = ExtResource("3_4yot6")
+surface_material_override/2 = ExtResource("3_nt03v")
+
+[node name="Cube_001" parent="." index="1" unique_id=1359223847]
+surface_material_override/0 = ExtResource("2_nve66")
+surface_material_override/1 = ExtResource("3_nt03v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2" unique_id=1956389163]
+shape = SubResource("ConvexPolygonShape3D_4yot6")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="3" unique_id=34669441]
+transform = Transform3D(0.34399056, 0, 0, 0, 0.34399056, 0, 0, 0, 0.34399056, 0, 3.391403, -0.70196694)
+shape = SubResource("ConvexPolygonShape3D_xe4fk")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="." index="4" unique_id=1535454849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.975817, -0.70018584)
+amount = 32
+lifetime = 3.0
+mesh = SubResource("SphereMesh_oqi4i")
+direction = Vector3(0, -1, 0)
+gravity = Vector3(0, 2, 0)
+initial_velocity_max = 1.0
+scale_amount_curve = SubResource("Curve_giiiv")
+color_ramp = SubResource("Gradient_mm2mi")
+color_initial_ramp = SubResource("Gradient_5cn4e")
+
+[node name="Man" type="StaticBody3D" parent="." index="5" unique_id=48840816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.902083, 0.80020106, 0)
+script = ExtResource("7_pwvdy")
+textIDs = Array[String](["man_quest", "man_complete"])
+neededItem = "cowboy_hat"
+gives = "dumbell_left"
+objectName = "Homunculus"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Man" index="0" unique_id=2111180991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39794922, 0)
+shape = SubResource("BoxShape3D_lnhc4")
+
+[node name="Sprite" type="Sprite3D" parent="Man" index="1" unique_id=153389390]
+transform = Transform3D(1.455, 0, 0, 0, 1.455, 0, 0, 0, 1.455, 0, 0.41038275, 0)
+billboard = 2
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_b4qtk")
+
+[node name="Music" type="AudioStreamPlayer3D" parent="Man" index="2" unique_id=817164649]
+stream = ExtResource("9_pwvdy")
+volume_db = -15.0
+autoplay = true
+max_distance = 75.0
+bus = &"Music"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Man" index="3" unique_id=1742117931]
+bus = &"SFX"

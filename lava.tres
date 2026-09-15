@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://qmwe0u2fblgn"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_e606x"]
+
+[resource]
+albedo_texture = SubResource("NoiseTexture2D_e606x")
+emission_enabled = true
+emission = Color(1, 0.2509804, 0, 1)
+emission_energy_multiplier = 2.0

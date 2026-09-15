@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://cil8ykaovrcvw"]
+
+[ext_resource type="Script" uid="uid://dud0i8p2haypl" path="res://text_popup.gd" id="1_pf6w8"]
+[ext_resource type="Script" uid="uid://caa8og6wipypy" path="res://exit_button.gd" id="2_dv5dx"]
+
+[node name="TextPopup" type="PanelContainer" unique_id=1979097884]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -192.0
+offset_right = 256.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pf6w8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1824830234]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=522924292]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=301686499]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=150868580]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "Escape Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=577226188]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "X"
+script = ExtResource("2_dv5dx")
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=593805037]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=1755177198]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/ScrollContainer" unique_id=1415565241]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "Hey there, this is the cool text from the sign!"
+fit_content = true

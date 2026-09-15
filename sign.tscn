@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cqfjjcvju40d0"]
+
+[ext_resource type="ArrayMesh" uid="uid://bvcpknv7igfbo" path="res://Models/sign.obj" id="1_q3tny"]
+[ext_resource type="Script" uid="uid://s28frgdnmbl0" path="res://sign.gd" id="1_tbceu"]
+[ext_resource type="Material" uid="uid://cs4vrvs2jgis" path="res://tree_bark.tres" id="2_tbceu"]
+[ext_resource type="Texture2D" uid="uid://cn2a64vgt6th5" path="res://sign_text.png" id="3_e8cgb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e8cgb"]
+size = Vector3(1.8398438, 1.8568726, 0.39257813)
+
+[node name="Sign" type="StaticBody3D" unique_id=755211769]
+collision_layer = 5
+collision_mask = 0
+script = ExtResource("1_tbceu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1995884133]
+mesh = ExtResource("1_q3tny")
+surface_material_override/0 = ExtResource("2_tbceu")
+
+[node name="Text" type="Sprite3D" parent="." unique_id=1646324473]
+transform = Transform3D(2.72, 0, 0, 0, 2.72, 0, 0, 0, 2.72, 0, 1.3539996, 0.13911927)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_e8cgb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1477445416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99105835, 0)
+shape = SubResource("BoxShape3D_e8cgb")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1145089287]
+bus = &"SFX"

@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://cmbvlh5gxqs74"]
+
+[ext_resource type="Script" uid="uid://dkypa6n80a4at" path="res://intro.gd" id="1_ayt76"]
+[ext_resource type="Texture2D" uid="uid://1bf5qgffnws8" path="res://Texture/intro_1.png" id="1_s2ta7"]
+[ext_resource type="AudioStream" uid="uid://beq3iq1pstdfa" path="res://Music/lore.ogg" id="3_7a8ye"]
+
+[node name="Intro" type="CanvasLayer" unique_id=561989240]
+script = ExtResource("1_ayt76")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1895080042]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1254044312]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1470620595]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=310894367]
+custom_minimum_size = Vector2(0, 89.12)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=1419080652]
+custom_minimum_size = Vector2(0, 384)
+layout_mode = 2
+texture = ExtResource("1_s2ta7")
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=750114136]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "dwasdwasdwasdwasd"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=575955866]
+modulate = Color(1, 1, 1, 0.46666667)
+custom_minimum_size = Vector2(0, 56.34)
+layout_mode = 2
+text = "SPACEBAR for next slide"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=456846635]
+stream = ExtResource("3_7a8ye")
+volume_db = -10.0
+autoplay = true
+bus = &"Music"
+
+[node name="Label" type="Label" parent="." unique_id=1390815969]
+modulate = Color(1, 1, 1, 0.5019608)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "TAB to skip"

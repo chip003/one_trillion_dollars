@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://kbpk2cbmwqh5"]
+
+[ext_resource type="Texture2D" uid="uid://cscdr58gaypc8" path="res://Texture/roof_texture.png" id="1_rvm62"]
+
+[resource]
+albedo_texture = ExtResource("1_rvm62")
+uv1_scale = Vector3(1.5, 1.5, 1.5)
+uv1_triplanar = true
+texture_filter = 0

@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://do8rawjr36d6g"]
+
+[ext_resource type="Script" uid="uid://7ng3i80s1ili" path="res://global.gd" id="1_6q3x5"]
+[ext_resource type="AudioStream" uid="uid://c8ecnvqwkvk80" path="res://Sounds/success.wav" id="2_qxp0b"]
+[ext_resource type="AudioStream" uid="uid://w1nwoy3rakd8" path="res://Sounds/ui_open.wav" id="3_hhif3"]
+[ext_resource type="AudioStream" uid="uid://cqyooab6fwrrw" path="res://Sounds/ui_hover.wav" id="4_74nqk"]
+[ext_resource type="AudioStream" uid="uid://cw7fix2xuc204" path="res://Sounds/ui_click.wav" id="5_ol57v"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8tbuy"]
+random_pitch = 1.2599211
+streams_count = 1
+stream_0/stream = ExtResource("3_hhif3")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qxp0b"]
+random_pitch = 1.2599211
+streams_count = 1
+stream_0/stream = ExtResource("4_74nqk")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_2wtbm"]
+random_pitch = 1.2599211
+streams_count = 1
+stream_0/stream = ExtResource("5_ol57v")
+
+[node name="Global" type="Node" unique_id=395548500]
+script = ExtResource("1_6q3x5")
+
+[node name="Success" type="AudioStreamPlayer" parent="." unique_id=333630645]
+stream = ExtResource("2_qxp0b")
+volume_db = -5.0
+bus = &"SFX"
+
+[node name="UIOpen" type="AudioStreamPlayer" parent="." unique_id=898815284]
+stream = SubResource("AudioStreamRandomizer_8tbuy")
+bus = &"UI"
+
+[node name="UIHover" type="AudioStreamPlayer" parent="." unique_id=1083706044]
+stream = SubResource("AudioStreamRandomizer_qxp0b")
+bus = &"UI"
+
+[node name="UIClick" type="AudioStreamPlayer" parent="." unique_id=1409866004]
+stream = SubResource("AudioStreamRandomizer_2wtbm")
+bus = &"UI"

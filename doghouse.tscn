@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://en4bx1u7unl0"]
+
+[ext_resource type="PackedScene" uid="uid://dy4osoigby6ya" path="res://Models/doghouse.blend" id="1_uib3i"]
+[ext_resource type="Material" uid="uid://doe6h7otwrvqk" path="res://red_wood.tres" id="2_c5tx4"]
+[ext_resource type="Script" uid="uid://cc3f5j5p2iogc" path="res://doghouse.gd" id="2_x05jr"]
+[ext_resource type="Material" uid="uid://kbpk2cbmwqh5" path="res://roof.tres" id="2_xxdek"]
+[ext_resource type="Material" uid="uid://dp1p57y7nf3e5" path="res://void.tres" id="4_83cyy"]
+[ext_resource type="AudioStream" uid="uid://2tlkll78dg7g" path="res://Music/dawghouse.ogg" id="5_02d8x"]
+[ext_resource type="ArrayMesh" uid="uid://d1qo7yckihaiq" path="res://Models/bone.obj" id="7_qn4xc"]
+[ext_resource type="Texture2D" uid="uid://do1lnwp3ye6be" path="res://dog.png" id="8_x05jr"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_c5tx4"]
+points = PackedVector3Array(1.5196606, 1.6846751, 1.1548456, -1.5651605, 1.4780853, -1.3460772, -1.4376999, 0.0064182924, -0.9940135, -1.650974, 1.3278935, 1.3486015, 1.4215404, 2.220446e-16, -0.99964845, 1.4215404, 0, 0.98517096, 1.6802144, 2.2144322, -0.11284587, -1.7155665, 2.2215116, 0.09879752, -1.4376999, 0.0064182924, 0.979536, 1.5427824, 1.5856712, -1.3477341, 1.6266739, 1.3278935, 1.3486015, -1.5769879, 1.5885715, 1.3417959, 1.7962563, 1.9492731, -0.23321211, -1.8205564, 1.9492731, -0.23321211, -1.702616, 2.1600063, -0.21847461, 1.6904625, 2.2209966, 0.09874747, -1.5670825, 1.5856712, -1.3477341, 1.6266739, 1.3278935, -1.3069314, -1.650974, 1.3278935, -1.3069314, 1.5527102, 1.5885781, 1.3418152, 1.7962563, 1.9492731, 0.21845803, -1.8205564, 1.9492731, 0.21845803, -1.7035962, 2.213844, -0.11278857, -1.4327326, 1.6826012, -1.1649753, 1.5408604, 1.4780853, -1.3460772, 1.4084327, 1.6826012, -1.1649753, -1.7072654, 1.4972988, -0.967833, 1.6829655, 1.4972988, -0.967833, -1.7072654, 1.4972988, 0.9530789, -1.5451511, 1.6851058, 1.1557487, 1.6829655, 1.4972988, 0.9530789, -1.7154458, 2.1678207, 0.20533977)
+
+[node name="doghouse" unique_id=794350214 instance=ExtResource("1_uib3i")]
+script = ExtResource("2_x05jr")
+textIDs = Array[String](["doghouse", "doghouse_complete"])
+neededItem = "dog"
+gives = "dumbell_middle"
+objectName = "Dog House"
+
+[node name="Cube" parent="." index="0" unique_id=214472480]
+surface_material_override/0 = ExtResource("2_c5tx4")
+surface_material_override/1 = ExtResource("2_xxdek")
+surface_material_override/2 = ExtResource("4_83cyy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=1944579262]
+shape = SubResource("ConvexPolygonShape3D_c5tx4")
+
+[node name="Music" type="AudioStreamPlayer3D" parent="." index="2" unique_id=1212264952]
+stream = ExtResource("5_02d8x")
+volume_db = -15.0
+autoplay = true
+max_distance = 75.0
+bus = &"Music"
+
+[node name="Bone" type="MeshInstance3D" parent="." index="3" unique_id=129578176]
+transform = Transform3D(-2.6226832e-08, 2.6226836e-08, 0.6, 0.6, -2.6226834e-08, 2.6226834e-08, 2.6226836e-08, 0.6, -2.6226834e-08, -1.396518, 1.5432984, 0)
+mesh = ExtResource("7_qn4xc")
+
+[node name="Dog" type="Sprite3D" parent="." index="4" unique_id=1350585631]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -1.4377131, 0.5118683, -0.02871874)
+pixel_size = 0.006
+billboard = 2
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_x05jr")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="5" unique_id=231284555]
+bus = &"SFX"

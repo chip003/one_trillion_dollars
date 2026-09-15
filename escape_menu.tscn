@@ -1,0 +1,185 @@
+[gd_scene format=3 uid="uid://c2qy0rsyw55wf"]
+
+[ext_resource type="Script" uid="uid://bs8n7xg4c8tu5" path="res://menu.gd" id="1_td5n0"]
+[ext_resource type="Script" uid="uid://caa8og6wipypy" path="res://exit_button.gd" id="2_m3jdq"]
+[ext_resource type="Script" uid="uid://dyv1rb6ymrrej" path="res://volume_slider.gd" id="3_jvdrv"]
+[ext_resource type="Script" uid="uid://hkkjm0quhfo2" path="res://option_slider.gd" id="4_m3jdq"]
+[ext_resource type="Script" uid="uid://dduvaoc5phrjf" path="res://ui_scale_slider.gd" id="5_jvdrv"]
+
+[node name="EscapeMenu" type="PanelContainer" unique_id=2116101074]
+custom_minimum_size = Vector2(512, 256)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_td5n0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1130229865]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=352933629]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=1679287934]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1293553995]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "Escape Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1591017733]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "X"
+script = ExtResource("2_m3jdq")
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=49293242]
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="VBoxContainer" unique_id=1598713341]
+layout_mode = 2
+text = "Resume"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1921404489]
+layout_mode = 2
+text = "Quit Game"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer" unique_id=1750695107]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1604205220]
+layout_mode = 2
+
+[node name="Labels" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2" unique_id=1530582032]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/Labels" unique_id=866150226]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2/Labels" unique_id=274519308]
+layout_mode = 2
+text = "SFX Volume"
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer2/Labels" unique_id=470328845]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="Label5" type="Label" parent="VBoxContainer/HBoxContainer2/Labels" unique_id=1881204555]
+layout_mode = 2
+text = "UI Volume"
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer2/Labels" unique_id=1504881067]
+layout_mode = 2
+text = "Mouse XY"
+
+[node name="Label6" type="Label" parent="VBoxContainer/HBoxContainer2/Labels" unique_id=436555837]
+layout_mode = 2
+text = "UI Scale"
+
+[node name="Sliders" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2" unique_id=979153022]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/HBoxContainer2/Sliders" unique_id=1244057555 node_paths=PackedStringArray("valueLabel")]
+layout_mode = 2
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.01
+script = ExtResource("3_jvdrv")
+valueLabel = NodePath("../../Values/Label")
+
+[node name="HSlider2" type="HSlider" parent="VBoxContainer/HBoxContainer2/Sliders" unique_id=1515055182 node_paths=PackedStringArray("valueLabel")]
+layout_mode = 2
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.01
+script = ExtResource("3_jvdrv")
+bus = "SFX"
+valueLabel = NodePath("../../Values/Label2")
+
+[node name="HSlider3" type="HSlider" parent="VBoxContainer/HBoxContainer2/Sliders" unique_id=630216815 node_paths=PackedStringArray("valueLabel")]
+layout_mode = 2
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.01
+script = ExtResource("3_jvdrv")
+bus = "Music"
+valueLabel = NodePath("../../Values/Label3")
+
+[node name="HSlider5" type="HSlider" parent="VBoxContainer/HBoxContainer2/Sliders" unique_id=763048703 node_paths=PackedStringArray("valueLabel")]
+layout_mode = 2
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.01
+script = ExtResource("3_jvdrv")
+bus = "UI"
+valueLabel = NodePath("../../Values/Label5")
+
+[node name="HSlider4" type="HSlider" parent="VBoxContainer/HBoxContainer2/Sliders" unique_id=183888469 node_paths=PackedStringArray("valueLabel")]
+layout_mode = 2
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.01
+script = ExtResource("4_m3jdq")
+valueLabel = NodePath("../../Values/Label4")
+
+[node name="HSlider6" type="HSlider" parent="VBoxContainer/HBoxContainer2/Sliders" unique_id=1852387757 node_paths=PackedStringArray("valueLabel")]
+layout_mode = 2
+size_flags_vertical = 3
+min_value = 0.5
+max_value = 1.25
+step = 0.01
+value = 0.5
+script = ExtResource("5_jvdrv")
+valueLabel = NodePath("../../Values/Label6")
+
+[node name="Values" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2" unique_id=1592634875]
+custom_minimum_size = Vector2(43, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2/Values" unique_id=2049323670]
+layout_mode = 2
+text = "100"
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2/Values" unique_id=1309597661]
+layout_mode = 2
+text = "100"
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer2/Values" unique_id=1369881374]
+layout_mode = 2
+text = "100"
+
+[node name="Label5" type="Label" parent="VBoxContainer/HBoxContainer2/Values" unique_id=1356677347]
+layout_mode = 2
+text = "100"
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer2/Values" unique_id=115837087]
+layout_mode = 2
+text = "100"
+
+[node name="Label6" type="Label" parent="VBoxContainer/HBoxContainer2/Values" unique_id=1211124616]
+layout_mode = 2
+text = "100"
+
+[node name="Fullscreen" type="Button" parent="VBoxContainer" unique_id=1070382180]
+layout_mode = 2
+text = "Toggle Fullscreen"
+
+[connection signal="pressed" from="VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/Fullscreen" to="." method="_on_fullscreen_pressed"]

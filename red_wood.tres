@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://doe6h7otwrvqk"]
+
+[ext_resource type="Texture2D" uid="uid://dwejgonr153sx" path="res://Texture/red_planks.png" id="1_llw0a"]
+
+[resource]
+albedo_texture = ExtResource("1_llw0a")
+uv1_triplanar = true
+texture_filter = 0
